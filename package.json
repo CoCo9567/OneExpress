@@ -29,10 +29,16 @@
     "test": "craco test",
     "prepare": "husky install",
     "eject": "react-scripts eject",
-    "commit": "git add . && cz-customizable"
+    "commit": "git add . && cz-customizable",
+    "changelog": "conventional-changelog -p cz-config.js -i CHANGELOG.md -s -r 0"
   },
   "lint-staged": {
     "*.{jsx,tsx,js,ts}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "eslintConfig": {
     "extends": [
